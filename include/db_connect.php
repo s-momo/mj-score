@@ -16,9 +16,9 @@ class db_connect
         $this->db = new mysqli($servename,$username,self::password,self::database,self::dbport);
         $this->db->set_charset('utf8');
         
-        if ($db->connect_error)
+        if ($this->db->connect_error)
         {
-            die("Connection failed:" . $db->connect_error);
+            die("Connection failed:" . $this->db->connect_error);
         }
        
     }
